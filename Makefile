@@ -1,10 +1,10 @@
-LIBFILES	:= $(shell find . -name \*.c ! -name main.c)
-LIBOBJECTS	:= $(patsubst %.c,%.o,$(LIBFILES))
-LIBNAMES	:= vec math
-LIBFILES	:= $(patsubst %,lib%.a,$(LIBNAMES))
-LIBSOFILES	:= $(patsubst %,lib%.so,$(LIBNAMES))
-MAINFILES	:= add.c
-BINARIES	:= $(patsubst %.c,%,$(MAINFILES))
+LIBFILES		:= math.c vector.c
+LIBOBJECTS		:= $(patsubst %.c,%.o,$(LIBFILES))
+LIBNAMES		:= vec math
+LIBFILES		:= $(patsubst %,lib%.a,$(LIBNAMES))
+LIBSOFILES		:= $(patsubst %,lib%.so,$(LIBNAMES))
+MAINFILES		:= add.c
+BINARIES		:= $(patsubst %.c,%,$(MAINFILES))
 COMPILER_LIBS	:= $(foreach lib,$(LIBNAMES),$(shell echo "-l$(lib) "))
 
 all: $(BINARIES)
