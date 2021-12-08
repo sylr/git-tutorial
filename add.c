@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    int result = madd(atoi(argv[1]), atoi(argv[2]));
+    int result = add(atoi(argv[1]), atoi(argv[2]));
 
     printf("%d\n", result);
 

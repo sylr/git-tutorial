@@ -5,4 +5,4 @@ struct vector {
     int y;
 };
 
-extern vector add(vector a, vector b); 
+extern vector vadd(vector a, vector b); 

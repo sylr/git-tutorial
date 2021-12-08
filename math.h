@@ -1,2 +1,2 @@
-extern int madd(int a, int b);
-extern int msubstract(int a, int b);
+extern int add(int a, int b);
+extern int substract(int a, int b);
